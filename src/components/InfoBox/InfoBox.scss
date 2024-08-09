@@ -1,0 +1,76 @@
+@import "../../App.scss";
+
+.info-box-container {
+    height: 350px;
+    position: absolute;
+    width: 100%;
+    max-width: 1282px;
+    margin: 0 auto;
+    bottom: -190px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    padding-bottom: 80px;
+
+    .info-box {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        background-color: #ffffff;
+        overflow: hidden;
+
+        .info-box-item-1,
+        .info-box-item-3 {
+            background-color: $third-color;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .info-box-item-2 {
+            background-color: $secondary-color;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .info-box-content {
+            max-width: 374px;
+            text-align: center;
+
+            .info-box-title {
+                color: #ffffff;
+                font-family: "Poppins-Black", Helvetica, sans-serif;
+                font-size: 22px;
+                font-weight: 900;
+                letter-spacing: 1.54px;
+                margin-bottom: 20px;
+            }
+
+            .info-box-description {
+                color: $primary-color;
+                font-family: "Poppins-Regular", Helvetica, sans-serif;
+                font-size: 17px;
+                font-weight: 400;
+                margin-bottom: 20px;
+                text-align: right;
+            }
+
+            .info-box-icon {
+                margin-top: 20px;
+
+                img {
+                    width: 45px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,212 @@
+$primary-color: #ffffff;
+$secondary-color: #89A3B2;
+$third-color: #445863;
+$header-color:#A3C7DC;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.app {
+  height: 100%;
+  margin: 0;
+}
+
+// Define font styles
+@font-face {
+  font-family: "Poppins-Black";
+  src: url('../assets/fonts/Poppins-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url('../assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+// Global sizing variables
+$base-font-size: 16px;
+$small-font-size: 0.875rem; // 14px
+$medium-font-size: 1rem; // 16px
+$large-font-size: 1.25rem; // 20px
+$xlarge-font-size: 1.5rem; // 24px
+
+$small-image-size: 100px;
+$medium-image-size: 200px;
+$large-image-size: 400px;
+
+// Define breakpoints
+$breakpoints: (
+  "small": 576px,
+  "medium": 768px,
+  "large": 992px,
+  "xlarge": 1200px
+);
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+// Apply standardized styles across breakpoints
+body {
+  font-family: "Poppins-Regular", Helvetica, sans-serif;
+  font-size: $medium-font-size;
+  line-height: normal;
+  background-color: $primary-color;
+  color: $third-color;
+}
+
+.header {
+  font-family: "Poppins-Black", Helvetica, sans-serif;
+  font-size: $xlarge-font-size;
+  color: $primary-color;
+}
+
+.sub-header {
+  font-family: "Poppins-Regular", Helvetica, sans-serif;
+  font-size: $large-font-size;
+}
+
+.text-light-bold {
+  font-family: "Poppins-Black", Helvetica, sans-serif;
+  font-size: $medium-font-size;
+  font-weight: normal;
+}
+
+.paragraph {
+  font-family: "Poppins-Regular", Helvetica, sans-serif;
+  font-size: $small-font-size;
+  color: lighten($third-color, 20%);
+}
+
+.image-small {
+  width: $small-image-size;
+  height: auto;
+}
+
+.image-medium {
+  width: $medium-image-size;
+  height: auto;
+}
+
+.image-large {
+  width: $large-image-size;
+  height: auto;
+}
+
+// Apply responsive styles based on breakpoints
+@include respond-to(small) {
+  .header {
+    font-size: $large-font-size;
+  }
+
+  .sub-header {
+    font-size: $medium-font-size;
+  }
+
+  .text-light-bold {
+    font-size: $small-font-size;
+  }
+
+  .paragraph {
+    font-size: $small-font-size;
+  }
+
+  .image-small {
+    width: $small-image-size / 2;
+  }
+
+  .image-medium {
+    width: $medium-image-size / 2;
+  }
+
+  .image-large {
+    width: $large-image-size / 2;
+  }
+}
+
+@include respond-to(medium) {
+  .header {
+    font-size: $xlarge-font-size;
+  }
+
+  .sub-header {
+    font-size: $large-font-size;
+  }
+
+  .text-light-bold {
+    font-size: $medium-font-size;
+  }
+
+  .paragraph {
+    font-size: $medium-font-size;
+  }
+
+  .image-small {
+    width: $small-image-size;
+  }
+
+  .image-medium {
+    width: $medium-image-size;
+  }
+
+  .image-large {
+    width: $large-image-size;
+  }
+}
+
+@include respond-to(large) {
+  .header {
+    font-size: 2rem;
+  }
+
+  .sub-header {
+    font-size: 1.75rem;
+  }
+
+  .text-light-bold {
+    font-size: 1.25rem;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+  }
+}
+
+@include respond-to(xlarge) {
+  .header {
+    font-size: 3rem;
+  }
+
+  .sub-header {
+    font-size: 2.5rem;
+  }
+
+  .text-light-bold {
+    font-size: 1.75rem;
+  }
+
+  .paragraph {
+    font-size: 1.25rem;
+  }
+
+  .image-small {
+    width: $small-image-size * 1.5;
+  }
+
+  .image-medium {
+    width: $medium-image-size * 1.5;
+  }
+
+  .image-large {
+    width: $large-image-size * 1.5;
+  }
+}

@@ -1,0 +1,215 @@
+@import "../../../App.scss";
+
+.nav-container {
+    height: 123px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: transparent;
+    border-bottom: .2px solid white;
+    transition: background-color 0.3s ease;
+
+    &.scrolled {
+        background-color: $secondary-color;
+        border-bottom: none;
+
+        .menu-link {
+            color: $third-color; 
+        }
+
+        .donate-wrapper {
+            background-color: $third-color; 
+
+            .donate {
+                color: $primary-color; 
+            }
+        }
+
+        .menu-link:hover {
+            background-color: lighten($third-color, 10%);
+        }
+
+        .donate-wrapper:hover {
+            background-color: lighten($third-color, 10%);
+        }
+    }
+
+    .header-bar {
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        .overlap {
+            height: 100%;
+            position: relative;
+
+            .navigation-menu {
+                max-width: 1400px;
+                margin: 0 auto;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 20px;
+
+                .logo {
+                    flex: 1;
+                    margin-left: 20px;
+
+                    .logo-img {
+                        height: 80px;
+                    }
+                }
+
+                .menu {
+                    display: flex;
+                    justify-content: space-between;
+                    flex: 2;
+                    height: 100%;
+
+                    .menu-item {
+                        margin: 0;
+                        height: 100%;
+                        flex-grow: 1;
+
+                        .menu-link {
+                            color: $primary-color;
+                            font-family: "Poppins-SemiBold", Helvetica, sans-serif;
+                            font-size: $medium-font-size;
+                            font-weight: 600;
+                            letter-spacing: 1.5px;
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 100%;
+                            padding: 0;
+                            width: 100%;
+                            transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out, font-size 0.3s ease-in-out;
+
+                            &:hover {
+                                background-color: $third-color;
+                                color: $primary-color;
+                                font-size: $large-font-size;
+                                padding: 0 15px;
+                                transition: background-color 0.5s ease, font-size 0.5s ease;
+                            }
+                        }
+                    }
+                }
+
+                .button {
+                    flex: 1;
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-right: 20px;
+
+                    .donate-wrapper {
+                        background-color: $third-color;
+                        padding: 5px 15px;
+                        border-radius: 5px;
+                        display: inline-block;
+
+                        &:hover {
+                            background-color: lighten($third-color, 10%);
+                        }
+
+                        .donate {
+                            color: $primary-color;
+                            font-family: "Poppins-SemiBold", Helvetica, sans-serif;
+                            font-size: $large-font-size;
+                            text-decoration: none;
+                            padding: 5px 5px;
+                            display: block;
+                            text-align: center;
+
+                            &:hover {
+                                background-color: lighten($third-color, 10%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .line {
+            height: 1px;
+            left: 0;
+            position: absolute;
+            top: 122px;
+            width: 100%;
+        }
+    }
+}
+
+@include respond-to(small) {
+    .navigation-menu {
+        padding: 0 10px;
+
+        .menu-item {
+            margin: 0;
+        }
+
+        .menu-link {
+            font-size: $small-font-size;
+            width: auto;
+        }
+
+        .donate-wrapper .donate {
+            font-size: $medium-font-size;
+        }
+    }
+}
+
+@include respond-to(medium) {
+    .navigation-menu {
+        padding: 0 15px;
+
+        .menu-item {
+            margin: 0;
+        }
+
+        .menu-link {
+            font-size: $medium-font-size;
+            width: 100%;
+        }
+
+        .donate-wrapper .donate {
+            font-size: $large-font-size;
+        }
+    }
+}
+
+@include respond-to(large) {
+    .navigation-menu {
+        padding: 0 20px;
+
+        .menu-item {
+            margin: 0;
+        }
+
+        .menu-link {
+            font-size: $large-font-size;
+            width: 100%;
+        }
+
+        .donate-wrapper .donate {
+            font-size: $xlarge-font-size;
+        }
+    }
+}
+
+@include respond-to(xlarge) {
+    .navigation-menu {
+        .menu-link {
+            font-size: 1.75rem;
+            width: 100%;
+        }
+
+        .donate-wrapper .donate {
+            font-size: 2rem;
+        }
+    }
+}

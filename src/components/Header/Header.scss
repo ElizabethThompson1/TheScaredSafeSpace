@@ -1,0 +1,159 @@
+@import "../../App.scss";
+
+.header-container {
+    width: 100vw;
+    height: calc(100vh); 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:$header-color;
+    position: relative; 
+    top: 0;
+    z-index: 1; 
+    padding-top: 180px;
+    flex-direction: row;
+}
+
+.header-left,
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-80px); 
+}
+
+.header-text-group {
+    max-width: 600px;
+    text-align: left;
+
+    .header-subtitle {
+        color: $primary-color;
+        font-family: "Poppins-Black", Helvetica, sans-serif;
+        font-size: 3rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    .header-title {
+        color: $third-color;
+        font-family: "Poppins-Black", Helvetica, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+
+    .header-description {
+        color: $primary-color;
+        font-family: "Poppins-Regular", Helvetica, sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .header-button {
+        background-color: $third-color;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline-block;
+
+        .button-text-wrapper {
+            .button-text {
+                color: $primary-color;
+                font-family: "Poppins-SemiBold", Helvetica, sans-serif;
+                font-size: $large-font-size;
+                text-align: center;
+                text-decoration: none;
+                display: block;
+                padding: 9px 9px;
+            }
+        }
+
+        &:hover {
+            background-color: lighten($third-color, 10%);
+        }
+    }
+}
+
+.header-right {
+    img.header-image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@include respond-to(small) {
+    .header-container {
+        flex-direction: column;
+        height: auto;
+        padding-top: 0;
+    }
+
+    .header-left,
+    .header-right {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .header-text-group {
+        text-align: center;
+    }
+
+    .header-subtitle {
+        font-size: 2rem;
+    }
+
+    .header-title {
+        font-size: 1.2rem;
+    }
+
+    .header-description {
+        font-size: 0.9rem;
+    }
+
+    .header-button {
+        font-size: 0.9rem;
+    }
+}
+
+@include respond-to(medium) {
+    .header-container {
+        flex-direction: column;
+        height: auto;
+        padding-top: 0;
+    }
+
+    .header-left,
+    .header-right {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .header-text-group {
+        text-align: center;
+    }
+}
+
+@include respond-to(large) {
+    .header-container {
+        flex-direction: row;
+        height: calc(100vh);
+        padding-top: 123px;
+    }
+
+    .header-left,
+    .header-right {
+        width: auto;
+    }
+
+    .header-text-group {
+        text-align: left;
+    }
+}
