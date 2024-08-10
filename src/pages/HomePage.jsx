@@ -1,10 +1,12 @@
 import React from 'react';
 import Header from '../components/Header/Header';
+import Mission from '../components/Mission/Mission';
 
 const HomePage = () => {
   return (
     <>
-      <Header/>  
+      <Header/>
+      <Mission/>
     </>
   );
 }
