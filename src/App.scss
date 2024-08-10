@@ -16,12 +16,12 @@ html, body, #root {
 // Define font styles
 @font-face {
   font-family: "Poppins-Black";
-  src: url('../assets/fonts/Poppins-Black.ttf') format('truetype');
+  src: url('../public/assets/fonts/Poppins-Black.ttf') format('truetype');
 }
 
 @font-face {
   font-family: "Poppins-Regular";
-  src: url('../assets/fonts/Poppins-Regular.ttf') format('truetype');
+  src: url('../public/assets/fonts/Poppins-Regular.ttf') format('truetype');
 }
 
 // Global sizing variables

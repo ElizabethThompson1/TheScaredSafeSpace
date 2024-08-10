@@ -30,9 +30,11 @@ const Header = () => {
                 </div>
             </div>
             <div className="header-right">
-                <img className="header-image" alt="Polygon" src="polygon-1.png" />
+                <div className="image-container">
+                    <img className="header-image" alt="Polygon" src="/assets/images/homeHeader.png" />
+                </div>
             </div>
-            <InfoBox/>
+            <InfoBox />
         </div>
     );
 }
