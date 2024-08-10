@@ -9,7 +9,7 @@ const NavBar = () => {
         <div className="overlap">
           <div className="navigation-menu">
             <div className="logo">
-              <img src="your-logo.png" alt="Logo" className="logo-img" />
+              <img src="/assets/images/logo.png" alt="Logo" className="logo-img" />
             </div>
             <div className="menu">
               <div className="menu-item">

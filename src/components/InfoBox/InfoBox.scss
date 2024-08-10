@@ -20,15 +20,17 @@
         background-color: #ffffff;
         overflow: hidden;
 
+
         .info-box-item-1,
         .info-box-item-3 {
             background-color: $third-color;
             flex: 1;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start; 
             padding: 20px;
             color: white;
+            padding-top: 2rem;
         }
 
         .info-box-item-2 {
@@ -36,14 +38,18 @@
             flex: 1;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start; 
             padding: 20px;
             color: white;
+            padding-top: 2rem;
         }
 
         .info-box-content {
             max-width: 374px;
-            text-align: center;
+            text-align: left; 
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
 
             .info-box-title {
                 color: #ffffff;
@@ -60,11 +66,11 @@
                 font-size: 17px;
                 font-weight: 400;
                 margin-bottom: 20px;
-                text-align: right;
             }
 
             .info-box-icon {
                 margin-top: 20px;
+                align-self: flex-start; /* Aligns the icon to the start (left) */
 
                 img {
                     width: 45px;

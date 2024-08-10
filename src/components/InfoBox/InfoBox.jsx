@@ -12,13 +12,13 @@ const infoBoxData = [
         title: "FOSTER COMMUNITY STRENGTH AND CONNECTION",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-        icon: "/icons/icons8-arrow-64.png",
+        icon: "/assets/icons/icons8-arrow-64.png",
     },
     {
         title: "PROMOTE UNIVERSAL VALUES OF RESPECT AND KINDNESS",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-        icon: "/icons/icons8-arrow-64.png",
+        icon: "/assets/icons/icons8-arrow-64.png",
     },
 ];
 
