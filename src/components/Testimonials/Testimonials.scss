@@ -1,0 +1,212 @@
+@import "../../App.scss";
+
+.testimonial-box {
+  height: 100vh;
+  position: relative;
+  width: 1340px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .testimonial-content {
+    height: 302px;
+    width: 100%;
+    display: flex;
+    position: relative;
+
+    .testimonial-left {
+      height: 244px;
+      width: 657px;
+      position: relative;
+
+      .testimonial-left-content {
+        height: 244px;
+        width: 100%;
+        position: relative;
+
+        .testimonial-title {
+          height: 173px;
+          position: relative;
+
+          .title-group {
+            position: relative;
+            height: 173px;
+
+            .resources-icon-image {
+              color: $header-color;
+              width: 150px;
+              height: 150px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              opacity: 0.5;
+            }
+
+            .testimonial-small-title {
+              -webkit-text-stroke: 1px $secondary-color;
+              color: $secondary-color;
+              font-family: "Poppins-Black", Helvetica, sans-serif;
+              font-size: 17px;
+              position: absolute;
+              top: 29px;
+              left: 0;
+            }
+
+            .testimonial-large-title {
+              color: $third-color;
+              font-family: "Poppins-Black", Helvetica, sans-serif;
+              font-size: 45px;
+              position: absolute;
+              top: 71px;
+              left: 0;
+              width: 655px;
+            }
+          }
+        }
+
+        .testimonial-description {
+          color: $secondary-color;
+          font-family: "Poppins-Regular", Helvetica, sans-serif;
+          font-size: 17px;
+          position: absolute;
+          top: 166px;
+          left: 0;
+          width: 655px;
+        }
+      }
+    }
+
+    .testimonial-right {
+      height: 302px;
+      width: 655px;
+      position: absolute;
+      top: 0;
+      left: 685px;
+
+      .testimonial-right-wrapper {
+        height: 302px;
+        width: 100%;
+
+        .testimonial-right-content {
+          border: 1px solid lighten($third-color, 20%);
+          height: 302px;
+          position: relative;
+          width: 100%;
+
+          .star-rating {
+            height: 23px;
+            width: 184px;
+            position: absolute;
+            top: 29px;
+            left: 29px;
+
+            .star {
+              width: 20px;
+              height: 20px;
+              margin-right: 8px; /* Spacing between stars */
+            }
+
+            .empty {
+              opacity: 0.3; /* Lighter opacity for empty stars */
+            }
+          }
+
+          .testimonial-text {
+            color: $secondary-color;
+            font-family: "Poppins-Regular", Helvetica, sans-serif;
+            font-size: 17px;
+            position: absolute;
+            top: 67px;
+            left: 29px;
+            width: 595px;
+
+            .read-more {
+              color: $third-color;
+              font-weight: bold;
+              cursor: pointer;
+              text-decoration: none;
+              background: none;
+              border: none;
+              padding: 0;
+              font-family: inherit;
+              font-size: inherit;
+              transition: color 0.2s;
+
+              &:hover {
+                color: darken($third-color, 10%);
+              }
+            }
+          }
+
+          .client-info {
+            height: 85px;
+            width: 228px;
+            position: absolute;
+            top: 186px;
+            left: 29px;
+
+            .image-container {
+              height: 85px;
+              width: 85px;
+              border-radius: 50%; /* Circular container */
+              overflow: hidden; /* Hide overflow to keep image within circle */
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: $primary-color; /* Fallback background color */
+
+              .client-image {
+                height: 100%;
+                width: 100%;
+                object-fit: cover; /* Ensures image fits within the circular container */
+              }
+            }
+
+            .client-name {
+              color: $third-color;
+              font-family: "Poppins-Black", Helvetica, sans-serif;
+              font-size: 17px;
+              position: absolute;
+              top: 16px;
+              left: 100px;
+            }
+
+            .client-title {
+              -webkit-text-stroke: 1px $secondary-color;
+              color: $secondary-color;
+              font-family: "Poppins-SemiBold", Helvetica, sans-serif;
+              font-size: 15px;
+              position: absolute;
+              top: 46px;
+              left: 99px;
+            }
+          }
+
+          .carousel-controls {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+
+            button {
+              background-color: $secondary-color;
+              color: white;
+              border: none;
+              padding: 5px 10px;
+              cursor: pointer;
+              margin: 0 5px;
+              font-family: "Poppins-SemiBold", Helvetica, sans-serif;
+
+              &:hover {
+                background-color: $third-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
