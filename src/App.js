@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage';
 // import Contact from './pages/Contact';
 // import NotFound from './pages/NotFound';
 // import Donation from './pages/Donation';
-// import About from './pages/About';
+import About from './pages/AboutPage';
 // import Events from './pages/Events';
 // import FAQ from './pages/FAQ';
 // import SignIn from './pages/Admin/SignIn';
@@ -14,22 +14,6 @@ import './App.scss';
 import { Footer } from './components/common/Footer/Footer';
 
 function App() {
-  useEffect(() => {
-    const handleScroll = () => {
-      const nav = document.querySelector('.nav-container');
-      if (window.scrollY > 0) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
     <Router>
@@ -37,9 +21,9 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<About />} />
           {/* <Route path="/contact" element={<Contact />} />
           <Route path="/donation" element={<Donation />} />
-          <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/admin/signin" element={<SignIn />} />
