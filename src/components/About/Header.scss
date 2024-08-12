@@ -1,0 +1,168 @@
+@import "../../App.scss";
+
+.about-header-container {
+  width: 100%;
+  height: calc(100vh);
+  display: flex;
+  align-items: right;
+  justify-content: space-between;
+  background-color: $header-color;
+  padding-top: 180px;
+
+  .about-header-left,
+  .about-header-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-header-text-group {
+    max-width: 600px;
+    text-align: left;
+    position: relative;
+
+    .about-header-title {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .about-header-icon {
+        position: absolute;
+        top: -10;
+        left: 0;
+        width: 300px;
+        height: 300px;
+        // opacity: 0.1; /* Faded background effect */
+      }
+
+      .about-header-title-text {
+        position: relative;
+        color: $primary-color;
+        font-family: "Poppins-Black", Helvetica, sans-serif;
+        font-size: 3rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        z-index: 1;
+        margin-left: 20px; /* Adjust for spacing */
+      }
+    }
+
+    .about-header-description {
+      color: $primary-color;
+      font-family: "Poppins-Regular", Helvetica, sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+  }
+
+  .about-header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .about-image-container {
+      width: 100%;
+      max-width: 400px;
+      height: 30rem;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      overflow: hidden;
+      position: relative;
+
+      img.about-header-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+        transform-origin: center center;
+      }
+
+      &:hover img.about-header-image {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+// Responsive styles
+@include respond-to(small) {
+  .about-header-container {
+    flex-direction: column;
+    height: auto;
+    padding-top: 0;
+  }
+
+  .about-header-left,
+  .about-header-right {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .about-header-text-group {
+    text-align: center;
+
+    .about-header-title-text {
+      font-size: 2rem;
+    }
+
+    .about-header-description {
+      font-size: 0.9rem;
+    }
+
+    .about-header-icon {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .about-image-container {
+    width: 200px;
+    height: 15rem;
+  }
+}
+
+@include respond-to(medium) {
+  .about-header-container {
+    flex-direction: column;
+    height: auto;
+    padding-top: 0;
+  }
+
+  .about-header-left,
+  .about-header-right {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .about-header-text-group {
+    text-align: center;
+  }
+
+  .about-image-container {
+    width: 300px;
+    height: 20rem;
+  }
+}
+
+@include respond-to(large) {
+  .about-header-container {
+    flex-direction: row;
+    height: calc(100vh);
+    padding-top: 123px;
+  }
+
+  .about-header-left,
+  .about-header-right {
+    width: auto;
+  }
+
+  .about-header-text-group {
+    text-align: left;
+  }
+}
