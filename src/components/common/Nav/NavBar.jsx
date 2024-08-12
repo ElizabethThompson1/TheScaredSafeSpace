@@ -21,6 +21,9 @@ const NavBar = () => {
               <div className="menu-item">
                 <Link to="/services" className="menu-link">OUR SERVICES</Link>
               </div>
+              <div className="menu-item">
+                <Link to="/contact" className="menu-link">CONTACT US</Link>
+              </div>
             </div>
             <div className="button">
               <div className="donate-wrapper">
