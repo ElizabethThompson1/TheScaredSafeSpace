@@ -20,10 +20,10 @@
         }
 
         .donate-wrapper {
-            background-color: $third-color; 
+            background-color: $third-color;
 
             .donate {
-                color: $primary-color; 
+                color: $primary-color;
             }
         }
 
@@ -36,110 +36,97 @@
         }
     }
 
-    .header-bar {
+    .navigation-menu {
+        max-width: 1400px;
+        margin: 0 auto;
         height: 100%;
-        width: 100%;
-        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-        .overlap {
+        .logo {
+            flex: 1;
+            margin-left: 20px;
+
+            .logo-img {
+                height: 150px;
+            }
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            flex: 2;
             height: 100%;
-            position: relative;
 
-            .navigation-menu {
-                max-width: 1400px;
-                margin: 0 auto;
+            .menu-item {
+                margin: 0;
                 height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0 20px;
+                flex-grow: 1;
 
-                .logo {
-                    flex: 1;
-                    margin-left: 20px;
-
-                    .logo-img {
-                        height: 150px;
-                    }
-                }
-
-                .menu {
+                .menu-link {
+                    color: $primary-color;
+                    font-family: "Poppins-SemiBold", Helvetica, sans-serif;
+                    font-size: $medium-font-size;
+                    font-weight: 600;
+                    letter-spacing: 1.5px;
+                    text-decoration: none;
                     display: flex;
-                    justify-content: space-between;
-                    flex: 2;
+                    align-items: center;
+                    justify-content: center;
                     height: 100%;
+                    padding: 0;
+                    width: 100%;
+                    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out, font-size 0.3s ease-in-out;
 
-                    .menu-item {
-                        margin: 0;
-                        height: 100%;
-                        flex-grow: 1;
-
-                        .menu-link {
-                            color: $primary-color;
-                            font-family: "Poppins-SemiBold", Helvetica, sans-serif;
-                            font-size: $medium-font-size;
-                            font-weight: 600;
-                            letter-spacing: 1.5px;
-                            text-decoration: none;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            height: 100%;
-                            padding: 0;
-                            width: 100%;
-                            transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out, font-size 0.3s ease-in-out;
-
-                            &:hover {
-                                background-color: $third-color;
-                                color: $primary-color;
-                                font-size: $large-font-size;
-                                padding: 0 15px;
-                                transition: background-color 0.5s ease, font-size 0.5s ease;
-                            }
-                        }
-                    }
-                }
-
-                .button {
-                    flex: 1;
-                    display: flex;
-                    justify-content: flex-end;
-                    margin-right: 20px;
-
-                    .donate-wrapper {
+                    &:hover {
                         background-color: $third-color;
-                        padding: 5px 15px;
-                        display: inline-block;
-
-                        &:hover {
-                            background-color: lighten($third-color, 10%);
-                        }
-
-                        .donate {
-                            color: $primary-color;
-                            font-family: "Poppins-SemiBold", Helvetica, sans-serif;
-                            font-size: $large-font-size;
-                            text-decoration: none;
-                            padding: 5px 5px;
-                            display: block;
-                            text-align: center;
-
-                            &:hover {
-                                background-color: lighten($third-color, 10%);
-                            }
-                        }
+                        color: $primary-color;
+                        font-size: $large-font-size;
+                        transition: background-color 0.5s ease, font-size 0.5s ease;
                     }
                 }
             }
         }
 
-        .line {
-            height: 1px;
-            left: 0;
-            position: absolute;
-            top: 122px;
-            width: 100%;
+        .button {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+
+            .donate-wrapper {
+                background-color: $third-color;
+                padding: 5px 15px;
+                display: inline-block;
+
+                &:hover {
+                    background-color: lighten($third-color, 10%);
+                }
+
+                .donate {
+                    color: $primary-color;
+                    font-family: "Poppins-SemiBold", Helvetica, sans-serif;
+                    font-size: $large-font-size;
+                    text-decoration: none;
+                    padding: 5px 5px;
+                    display: block;
+                    text-align: center;
+
+                    &:hover {
+                        background-color: lighten($third-color, 10%);
+                    }
+                }
+            }
         }
+    }
+
+    .line {
+        height: 1px;
+        left: 0;
+        position: absolute;
+        top: 122px;
+        width: 100%;
     }
 }
 

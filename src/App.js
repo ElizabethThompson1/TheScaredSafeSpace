@@ -11,6 +11,7 @@ import HomePage from './pages/HomePage';
 // import Dashboard from './pages/Admin/Dashboard';
 import NavBar from './components/common/Nav/NavBar';
 import './App.scss';
+import { Footer } from './components/common/Footer/Footer';
 
 function App() {
   useEffect(() => {
@@ -45,6 +46,7 @@ function App() {
           <Route path="/admin/dashboard" element={<Dashboard />} />
           <Route path="*" element={<NotFound />} /> */}
         </Routes>
+        <Footer/>
       </div>
     </Router>
   );
