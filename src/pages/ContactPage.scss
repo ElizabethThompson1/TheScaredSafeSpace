@@ -1,0 +1,143 @@
+
+.box {
+    height: 100%;
+    width: 550px;
+    background-color: #445863; 
+    position: absolute; 
+    top: 300px; 
+    border-radius: 4%;
+    left: 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding-right: 50px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    height: 80vh;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group.pair {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adds spacing between the fields */
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #888;
+    }
+
+    input,
+    textarea {
+        border: none;
+        border-bottom: 1px solid #ccc;
+        padding: 8px 0;
+        font-size: 16px;
+        background: transparent;
+        outline: none;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: #ccc;
+    }
+
+    input:focus,
+    textarea:focus {
+        border-bottom: 2px solid #445863;
+    }
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    min-height: 50px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.radio-group label {
+    margin-right: 15px;
+    font-weight: normal;
+    color: #888;
+    display: flex;
+    align-items: center;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+    appearance: none;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+.radio-group input[type="radio"]:checked {
+    background-color: #445863;
+    border-color: #445863;
+}
+
+.radio-group input[type="radio"]::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin: 4px;
+    background-color: #fff;
+    visibility: hidden;
+}
+
+.radio-group input[type="radio"]:checked::after {
+    visibility: visible;
+}
+
+button {
+    padding: 15px 50px;
+    background-color: #445863;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    align-self: flex-end;
+
+    &:hover {
+        background-color: #364852;
+    }
+}
