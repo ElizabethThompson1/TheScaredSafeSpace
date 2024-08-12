@@ -3,6 +3,7 @@ import Header from '../components/Header/Header';
 import Mission from '../components/Mission/Mission';
 import Resources from '../components/Resources/Resources';
 import Testimonials from '../components/Testimonials/Testimonials';
+import Events from '../components/Events/Events';
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
       <Mission/>
       <Resources/>
       <Testimonials/>
+      <Events/>
     </>
   );
 }
