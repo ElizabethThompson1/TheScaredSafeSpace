@@ -1,13 +1,17 @@
-@import "../../App.scss";
+@import "../../../App.scss";
 
 .about-header-container {
   width: 100%;
-  height: calc(100vh);
-  display: flex;
-  align-items: right;
-  justify-content: space-between;
-  background-color: $header-color;
-  padding-top: 180px;
+    height: calc(100vh); 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:$header-color;
+    position: relative; 
+    top: 0;
+    z-index: 1; 
+    padding-top: 180px;
+    flex-direction: row;
 
   .about-header-left,
   .about-header-right {
@@ -44,7 +48,8 @@
         font-weight: 900;
         letter-spacing: 2px;
         z-index: 1;
-        margin-left: 20px; /* Adjust for spacing */
+        margin-left: 20px;
+        /* Adjust for spacing */
       }
     }
 
