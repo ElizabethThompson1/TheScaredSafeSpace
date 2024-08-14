@@ -5,7 +5,7 @@ import HomePage from './pages/HomePage';
 // import NotFound from './pages/NotFound';
 // import Donation from './pages/Donation';
 import About from './pages/AboutPage';
-// import Events from './pages/Events';
+import Events from './pages/EventPage';
 // import FAQ from './pages/FAQ';
 // import SignIn from './pages/Admin/SignIn';
 // import Dashboard from './pages/Admin/Dashboard';
@@ -22,9 +22,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
+          <Route path="/events" element={<Events />} />
           {/* <Route path="/contact" element={<Contact />} />
           <Route path="/donation" element={<Donation />} />
-          <Route path="/events" element={<Events />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/admin/signin" element={<SignIn />} />
           <Route path="/admin/dashboard" element={<Dashboard />} />
