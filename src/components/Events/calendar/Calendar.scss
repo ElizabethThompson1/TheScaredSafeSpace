@@ -1,0 +1,173 @@
+@import "../../../App.scss";
+
+.calendar-container {
+    position: relative;
+    height: 100vh;
+    width: 1268px;
+    margin: 12px auto;
+    padding: 20px;
+    margin-top: 90px;
+
+    .calendar-header {
+        width: 100%;
+        margin-bottom: 20px;
+
+        .calendar-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .search-container {
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                input {
+                    font-family: "Poppins-Regular", Helvetica;
+                    font-size: 14px;
+                    color: #90a0b7;
+                    background: #fff;
+                    border: 1px solid #dadada;
+                    padding: 8px 35px 8px 10px;
+                    border-radius: 4px;
+                    width: 250px;
+                }
+
+                .icon-search {
+                    position: absolute;
+                    right: 10px;
+                    width: 24px;
+                    height: 24px;
+                    cursor: pointer;
+                }
+            }
+
+            .calendar-nav {
+                display: flex;
+                align-items: center;
+
+                .calendar-nav-control {
+                    background-color: #fff;
+                    border: 1px solid #dadada;
+                    border-radius: 10px;
+                    padding: 10px;
+                    margin-right: 10px;
+                    font-family: "Poppins-Regular", Helvetica;
+                    font-size: 14px;
+                    color: #979797;
+                    text-align: center;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+
+                    .icon-calendar {
+                        width: 24px;
+                        height: 24px;
+                        cursor: pointer;
+                        margin-right: 10px;
+                    }
+
+                    &.active {
+                        border-color: #5787a4;
+                        color: #5787a4;
+                    }
+                }
+
+                .calendar-month-control {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 20px;
+
+                    .icon-back,
+                    .icon-next {
+                        width: 24px;
+                        height: 24px;
+                        cursor: pointer;
+                    }
+
+                    .month-label {
+                        font-family: "Poppins-Regular", Helvetica;
+                        font-size: 24px;
+                        color: #666666;
+                        margin: 0 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 1px;
+        background-color: #dadada;
+        border-radius: 10px;
+        overflow: hidden;
+
+        .weekday-label {
+            background-color: #89a3b2;
+            color: #fff;
+            font-family: "Poppins-Regular", Helvetica;
+            font-size: 18px;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .calendar-day {
+            background-color: #fff;
+            padding: 10px;
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e0e0e0;
+            cursor: pointer;
+            position: relative;
+
+            &:hover {
+                background-color: #f4f4f4;
+            }
+
+            .day-number {
+                font-family: "Poppins-Black", Helvetica;
+                font-size: 18px;
+                color: #666666;
+            }
+
+            .event-item {
+                display: flex;
+                align-items: center;
+                background-color: #5787a4;
+                color: #fff;
+                border-radius: 8px;
+                padding: 5px;
+                margin-top: 5px;
+                height: 40px;
+                width: 100%;
+                box-sizing: border-box;
+
+                &:hover {
+                    background-color: lighten(#5787a4, 10%);
+                }
+
+                .event-icon {
+                    height: 30px;
+                    width: 30px;
+                    margin-right: 10px;
+                    object-fit: cover; 
+                    border-radius: 4px; 
+                }
+
+                .event-title {
+                    font-family: "Poppins-Regular", Helvetica;
+                    font-size: 12px;
+                    flex: 1;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+}
+

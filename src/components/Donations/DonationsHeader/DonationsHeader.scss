@@ -1,0 +1,174 @@
+@import "../../../App.scss";
+
+.donation-header-container {
+    width: 100%;
+    height: 80vh;
+    /* Adjust the height to 50vh */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $header-color;
+    position: relative;
+    top: 0;
+    z-index: 1;
+    padding-top: 80px;
+    /* Adjust padding as needed */
+    flex-direction: row;
+
+    .donation-header-left,
+    .donation-header-right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .donation-header-text-group {
+        max-width: 600px;
+        text-align: left;
+        position: relative;
+
+        .donation-header-title {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            .donation-header-icon {
+                position: absolute;
+                top: -10px;
+                left: 0;
+                width: 150px;
+                height: 150px;
+            }
+
+            .donation-header-title-text {
+                position: relative;
+                color: $primary-color;
+                font-family: "Poppins-Black", Helvetica, sans-serif;
+                font-size: 3rem;
+                font-weight: 900;
+                letter-spacing: 2px;
+                z-index: 1;
+                margin-left: 20px;
+            }
+        }
+
+        .donation-header-description {
+            color: $primary-color;
+            font-family: "Poppins-Regular", Helvetica, sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+    }
+
+    .donation-header-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .donation-image-container {
+            width: 100%;
+            max-width: 400px;
+            height: 30rem;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            overflow: hidden;
+            position: relative;
+
+            img.donation-header-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease-in-out;
+                transform-origin: center center;
+            }
+
+            &:hover img.donation-header-image {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+// Responsive styles
+@include respond-to(small) {
+    .donation-header-container {
+        flex-direction: column;
+        height: auto;
+        padding-top: 0;
+    }
+
+    .donation-header-left,
+    .donation-header-right {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .donation-header-text-group {
+        text-align: center;
+
+        .donation-header-title-text {
+            font-size: 2rem;
+        }
+
+        .donation-header-description {
+            font-size: 0.9rem;
+        }
+
+        .donation-header-icon {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .donation-image-container {
+        width: 200px;
+        height: 40rem;
+    }
+}
+
+@include respond-to(medium) {
+    .donation-header-container {
+        flex-direction: column;
+        height: auto;
+        padding-top: 0;
+    }
+
+    .donation-header-left,
+    .donation-header-right {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .donation-header-text-group {
+        text-align: center;
+    }
+
+    .donation-image-container {
+        width: 300px;
+        height: 40rem;
+    }
+}
+
+@include respond-to(large) {
+    .donation-header-container {
+        flex-direction: row;
+        height: 80vh;
+        /* Set to 50vh for larger screens */
+        padding-top: 123px;
+    }
+
+    .donation-header-left,
+    .donation-header-right {
+        width: auto;
+    }
+
+    .donation-header-text-group {
+        text-align: left;
+    }
+}

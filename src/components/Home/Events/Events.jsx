@@ -10,52 +10,52 @@ const eventsData = {
     },
     events: [
         {
-            eventName: "Mindful Meditation for Mental Health",
-            eventType: "Online",
-            date: "2024-09-15",
-            imageUrl: "/assets/images/planet1.png"
+            id: 1,
+            date: "2024-03-06",
+            title: "Conduct UX research for new project",
+            type: "Research",
+           imageUrl: "/assets/images/headPlanet.png",
+            description: "Detailed information about conducting UX research for the new project."
         },
         {
-            eventName: "Yoga for Anxiety Relief",
-            eventType: "In-Person",
-            date: "2024-09-20",
-            imageUrl: "/assets/images/planet1.png"
+            id: 2,
+            date: "2024-08-15",
+            title: "Planning and Meeting for new project",
+            type: "Meeting",
+           imageUrl: "/assets/images/headPlanet.png",
+            description: "Meeting with the team to plan the new project."
         },
         {
-            eventName: "Creative Art Therapy Workshop",
-            eventType: "In-Person",
-            date: "2024-09-25",
-            imageUrl: "/assets/images/planet1.png"
+            id: 3,
+            date: "2024-08-30",
+            title: "Retrospective Meeting",
+            type: "Retrospective",
+           imageUrl: "/assets/images/headPlanet.png",
+            description: "Reflecting on the project's progress in the retrospective meeting."
         },
         {
-            eventName: "Virtual Yoga for Mental Health",
-            eventType: "Online",
-            date: "2024-10-01",
-            imageUrl: "/assets/images/planet1.png"
+            id: 4,
+            date: "2024-07-10",
+            title: "Design Sprint",
+            type: "Workshop",
+           imageUrl: "/assets/images/headPlanet.png",
+            description: "A full-day workshop focused on design sprints."
         },
         {
-            eventName: "Crafts for Calm: DIY Stress Balls",
-            eventType: "In-Person",
-            date: "2024-10-05",
-            imageUrl: "/assets/images/planet1.png"
+            id: 5,
+            date: "2024-08-22",
+            title: "User Testing",
+            type: "Testing",
+           imageUrl: "/assets/images/headPlanet.png",
+            description: "Conduct user testing sessions to gather feedback."
         },
         {
-            eventName: "Mindful Coloring and Chat",
-            eventType: "Online",
-            date: "2024-10-10",
-            imageUrl: "/assets/images/planet1.png"
-        },
-        {
-            eventName: "Nature Walk & Yoga",
-            eventType: "In-Person",
-            date: "2024-10-15",
-            imageUrl: "/assets/images/planet1.png"
-        },
-        {
-            eventName: "Online Journaling for Mental Clarity",
-            eventType: "Online",
-            date: "2024-10-20",
-            imageUrl: "/assets/images/planet1.png"
+            id: 6,
+            date: "2024-03-25",
+            title: "Development Handoff",
+            type: "Handoff",
+           imageUrl: "/assets/images/headPlanet.png",
+            description: "Handoff designs to the development team."
         }
     ]
 };
