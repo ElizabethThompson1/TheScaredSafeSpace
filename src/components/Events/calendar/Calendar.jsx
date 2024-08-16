@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Calendar.scss";
+import EventPopUP from '../popup/EventPopUP';
 
 const Calendar = () => {
   const eventsData = [
@@ -8,7 +9,7 @@ const Calendar = () => {
       date: "2024-03-06",
       title: "Conduct UX research for new project",
       type: "Research",
-      icon: "mask-group.png",
+      imageUrl: "/assets/images/headPlanet.png",
       description: "Detailed information about conducting UX research for the new project."
     },
     {
@@ -16,7 +17,7 @@ const Calendar = () => {
       date: "2024-08-15",
       title: "Planning and Meeting for new project",
       type: "Meeting",
-      icon: "/assets/images/headPlanet.png",
+      imageUrl: "/assets/images/headPlanet.png",
       description: "Meeting with the team to plan the new project."
     },
     {
@@ -24,7 +25,7 @@ const Calendar = () => {
       date: "2024-08-30",
       title: "Retrospective Meeting",
       type: "Retrospective",
-      icon: "/assets/images/headPlanet.png",
+      imageUrl: "/assets/images/headPlanet.png",
       description: "Reflecting on the project's progress in the retrospective meeting."
     },
     {
@@ -32,7 +33,7 @@ const Calendar = () => {
       date: "2024-07-10",
       title: "Design Sprint",
       type: "Workshop",
-      icon: "/assets/images/headPlanet.png",
+      imageUrl: "/assets/images/headPlanet.png",
       description: "A full-day workshop focused on design sprints."
     },
     {
@@ -40,7 +41,7 @@ const Calendar = () => {
       date: "2024-08-22",
       title: "User Testing",
       type: "Testing",
-      icon: "user-testing.png",
+      imageUrl: "/assets/images/headPlanet.png",
       description: "Conduct user testing sessions to gather feedback."
     },
     {
@@ -48,7 +49,7 @@ const Calendar = () => {
       date: "2024-03-25",
       title: "Development Handoff",
       type: "Handoff",
-      icon: "handoff.png",
+      imageUrl: "/assets/images/headPlanet.png",
       description: "Handoff designs to the development team."
     }
   ];
@@ -97,7 +98,7 @@ const Calendar = () => {
     for (let i = 1; i <= daysInMonth; i++) {
       const dateStr = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1).toString().padStart(2, "0")}-${i.toString().padStart(2, "0")}`;
       const eventsForDay = filteredEvents.filter((e) => e.date === dateStr);
-  
+
       days.push(
         <div key={i} className="calendar-day">
           <div className="day-number">{i}</div>
@@ -182,6 +183,7 @@ const Calendar = () => {
         ))}
         {renderCalendarDays()}
       </div>
+      {selectedEvent && <EventPopUP event={selectedEvent} onClose={() => setSelectedEvent(null)} />}
     </div>
   );
 };

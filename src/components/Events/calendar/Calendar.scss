@@ -6,6 +6,7 @@
     width: 1268px;
     margin: 12px auto;
     padding: 20px;
+    margin-top: 90px;
 
     .calendar-header {
         width: 100%;
@@ -143,15 +144,18 @@
                 margin-top: 5px;
                 height: 40px;
                 width: 100%;
+                box-sizing: border-box;
 
                 &:hover {
                     background-color: lighten(#5787a4, 10%);
                 }
 
                 .event-icon {
-                    height: 100%;
-                    width: auto;
+                    height: 30px;
+                    width: 30px;
                     margin-right: 10px;
+                    object-fit: cover; 
+                    border-radius: 4px; 
                 }
 
                 .event-title {
@@ -166,3 +170,4 @@
         }
     }
 }
+
