@@ -1,0 +1,133 @@
+@import "../../../App.scss";
+
+.bio-box {
+    height: auto;
+    position: relative;
+    width: 100%;
+    max-width: 1370px;
+    margin: 0 auto;
+    padding: 350px 0;
+
+    .bio-about-block {
+        display: flex;
+        align-items: stretch;
+
+        .bio-left-column {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+            img.bio-left-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            &:hover img.bio-left-image {
+                transform: scale(1.1);
+            }
+        }
+
+        .bio-right-column {
+            flex: 1;
+            padding: 20px 20px 20px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .bio-overlap {
+                margin-bottom: 20px;
+
+                .bio-title {
+                    margin-bottom: 20px;
+                    position: relative;
+
+                    .bio-overlap-group {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+
+                        .bio-icon-image {
+                            position: absolute;
+                            top: 1px;
+                            left: -10px;
+                            width: 150px;
+                            height: 150px;
+                            opacity: 0.5;
+                            z-index: 1;
+                        }
+
+                        .title-container {
+                            position: relative;
+                            z-index: 2;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+
+                            .bio-sub {
+                                color: $secondary-color;
+                                font-family: "Poppins-Black", Helvetica, sans-serif;
+                                font-size: 3rem;
+                                font-weight: 300;
+                            }
+
+                            .bio-main-title {
+                                color: $third-color;
+                                font-family: "Poppins-Black", Helvetica, sans-serif;
+                                font-size: 3rem;
+                                font-weight: 900;
+                            }
+                        }
+                    }
+                }
+
+                .bio-description {
+                    color: black;
+                    font-family: "Montserrat-Regular", Helvetica, sans-serif;
+                    font-size: 19px;
+                    font-weight: 400;
+                    line-height: 1.5;
+                }
+            }
+
+            .bio-button {
+                all: unset;
+                width: 200px;
+                height: 50px;
+                margin-top: 20px;
+                position: relative;
+                cursor: pointer;
+
+                .contact-wrapper {
+                    background-color: $secondary-color;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: background-color 0.3s ease-in-out;
+
+                    .contact {
+                        color: $primary-color;
+                        font-family: "Poppins-SemiBold", Helvetica, sans-serif;
+                        font-size: $medium-font-size;
+                        font-weight: 600;
+                        text-align: center;
+                        transition: color 0.3s ease-in-out;
+                    }
+                }
+
+                &:hover .contact-wrapper {
+                    background-color: darken($secondary-color, 10%);
+                }
+
+                &:hover .contact {
+                    color: lighten($primary-color, 10%);
+                }
+            }
+        }
+    }
+}

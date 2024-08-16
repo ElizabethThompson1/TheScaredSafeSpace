@@ -1,0 +1,123 @@
+@import "../../../App.scss";
+
+.box {
+    height: 40vh;
+    position: relative;
+    width: 100%;
+    max-width: 884px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .group {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .div {
+            height: auto;
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+
+            .overlap {
+                background-color: $third-color;
+                border-radius: 66px;
+                height: 100px;
+                width: 100px;
+                cursor: pointer;
+                position: relative;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: lighten($third-color, 15%);
+                }
+
+                &.selected {
+                    background-color: lighten($third-color, 10%);
+                }
+
+                .text-wrapper {
+                    color: $primary-color;
+                    font-family: "Poppins-Bold", Helvetica;
+                    font-size: 23px;
+                    font-weight: 700;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                }
+            }
+        }
+
+        .group-2 {
+            margin-top: 180px; /* Adjusted margin-top to bring the input and button closer */
+            width: 70%;
+            display: flex;
+            flex-direction: row; /* Changed to row to align input and button horizontally */
+            align-items: center; /* Align items vertically */
+            justify-content: space-between; /* Space out the input and button */
+
+            .text-wrapper-6 {
+                color: $third-color;
+                font-family: "Poppins-Medium", Helvetica;
+                font-size: 12px;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+
+            .input-amount {
+                border: none;
+                border-bottom: 1px solid $third-color;
+                padding: 8px 0;
+                width: 60%; /* Adjust width to allow space for the button */
+                font-size: 14px;
+                outline: none;
+                transition: border-color 0.3s ease;
+                appearance: textfield;
+
+                &:focus {
+                    border-bottom-color: lighten($third-color, 15%);
+                }
+            }
+
+            input[type="number"]::-webkit-outer-spin-button,
+            input[type="number"]::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            input[type="number"] {
+                -moz-appearance: textfield;
+            }
+
+            .frame {
+                background-color: $third-color;
+                border-radius: 5px;
+                box-shadow: 0px 0px 14px #0000001f;
+                padding: 10px 20px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                margin-left: 20px; /* Space between input and button */
+
+                &:hover {
+                    background-color: lighten($third-color, 15%);
+                }
+
+                .text-wrapper-8 {
+                    color: $primary-color;
+                    font-family: "Poppins-Medium", Helvetica;
+                    font-size: 16px;
+                    font-weight: 500;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
