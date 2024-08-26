@@ -1,12 +1,13 @@
 @import "../../../App.scss";
 
 .bio-box {
-    height: auto;
+    height: 90vh;
     position: relative;
     width: 100%;
     max-width: 1370px;
     margin: 0 auto;
     padding: 350px 0;
+    margin-bottom: 260px;
 
     .bio-about-block {
         display: flex;

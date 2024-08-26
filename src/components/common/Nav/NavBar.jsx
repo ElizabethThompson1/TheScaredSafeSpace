@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './NavBar.scss';
 
 const NavBar = () => {
+    const location = useLocation();
+
     useEffect(() => {
         const handleScroll = () => {
             const nav = document.querySelector('.nav-container');
@@ -20,6 +22,13 @@ const NavBar = () => {
         };
     }, []);
 
+    useEffect(() => {
+        // Scroll to the top of the page when the route changes
+        window.scrollTo(0, 0);
+    }, [location]);
+
+    const isActive = (path) => location.pathname === path;
+
     return (
         <div className="nav-container">
             <div className="navigation-menu">
@@ -28,24 +37,54 @@ const NavBar = () => {
                 </div>
                 <div className="menu">
                     <div className="menu-item">
-                        <Link to="/" className="menu-link">HOME</Link>
+                        <Link
+                            to="/"
+                            className={`menu-link ${isActive('/') ? 'active' : ''}`}
+                        >
+                            HOME
+                        </Link>
                     </div>
                     <div className="menu-item">
-                        <Link to="/about" className="menu-link">ABOUT US</Link>
+                        <Link
+                            to="/about"
+                            className={`menu-link ${isActive('/about') ? 'active' : ''}`}
+                        >
+                            ABOUT US
+                        </Link>
                     </div>
                     <div className="menu-item">
-                        <Link to="/events" className="menu-link">EVENTS</Link>
+                        <Link
+                            to="/events"
+                            className={`menu-link ${isActive('/events') ? 'active' : ''}`}
+                        >
+                            EVENTS
+                        </Link>
                     </div>
                     <div className="menu-item">
-                        <Link to="/faq" className="menu-link">FAQ</Link>
+                        <Link
+                            to="/faq"
+                            className={`menu-link ${isActive('/faq') ? 'active' : ''}`}
+                        >
+                            FAQ
+                        </Link>
                     </div>
                     <div className="menu-item">
-                        <Link to="/contact" className="menu-link">CONTACT</Link>
+                        <Link
+                            to="/contact"
+                            className={`menu-link ${isActive('/contact') ? 'active' : ''}`}
+                        >
+                            CONTACT
+                        </Link>
                     </div>
                 </div>
                 <div className="button">
                     <div className="donate-wrapper">
-                        <Link to="/donation" className="donate">DONATE</Link>
+                        <Link
+                            to="/donation"
+                            className={`donate ${isActive('/donation') ? 'active' : ''}`}
+                        >
+                            DONATE
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -55,5 +94,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-

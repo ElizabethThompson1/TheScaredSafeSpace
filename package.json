@@ -7,14 +7,17 @@
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^5.16.6",
     "@mui/material": "^5.16.6",
+    "axios": "^1.7.4",
     "cra-template": "1.2.0",
+    "formik": "^2.4.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.2",
     "sass": "^1.77.8",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "yup": "^1.4.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -2,14 +2,16 @@
 
 .about-mission {
     width: 100%;
-    padding: 20px;
-    margin-top: 150px;
+    padding: 80px;
+    // margin-top: 150px;
+    background-color: #89a3b276;
 
     .info-box {
         max-width: 1340px;
         margin: 0 auto;
         padding: 20px;
         background-color: $primary-color;
+        background-color: #89a3b200;
 
         .mission-title {
             text-align: left;

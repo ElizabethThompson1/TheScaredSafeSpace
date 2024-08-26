@@ -49,9 +49,12 @@
             letter-spacing: 3.15px;
             position: absolute;
             top: 104px;
-            left: 77px;
-            width: 100%;
-            max-width: 1187px;
+            left: 0; /* Align to the far left */
+            width: 100%; /* Span the full width */
+            max-width: none; /* Remove max-width constraint */
+            padding: 0 20px; /* Add padding for some spacing from the edges */
+            box-sizing: border-box; /* Ensure padding is included in the element's width */
+            text-align: center; /* Center the text horizontally */
         }
 
         .cta-button {
@@ -68,7 +71,7 @@
                 height: 100%;
                 width: 100%;
                 position: relative;
-                transition: background-color 0.3s ease; // Transition for the hover effect
+                transition: background-color 0.3s ease; 
 
                 .cta-button-text {
                     color: $primary-color;

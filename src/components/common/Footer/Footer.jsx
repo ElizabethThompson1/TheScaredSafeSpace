@@ -24,7 +24,7 @@ const footerContent = {
 const navLinks = [
     { label: "HOME", path: "/" },
     { label: "ABOUT US", path: "/about" },
-    { label: "OUR SERVICES", path: "/services" },
+    { label: "ADMIN", path: "/admin/signin" },
     { label: "DONATE", path: "/donation" },
 ];
 

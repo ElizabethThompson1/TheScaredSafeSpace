@@ -55,7 +55,7 @@ const eventsData = {
     ]
 };
 
-// Custom arrow components
+
 const NextArrow = ({ onClick }) => (
     <div className="slick-arrow slick-next" onClick={onClick}>
         <img src="/assets/icons/calendar/arrow.svg" alt="Next" />
